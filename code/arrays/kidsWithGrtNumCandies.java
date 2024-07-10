@@ -13,13 +13,16 @@ public class kidsWithGrtNumCandies {
 
     static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         int max = candies[0];
-        List<Boolean> ans = new ArrayList<>();
-        for(int i = 0; i < candies.length; i++){
+    
+        for (int i = 1; i < candies.length; i++) {
             max = Math.max(max, candies[i]);
-            candies[i] = candies[i] + extraCandies;
-            if(candies[i] >= max){
+        }
+
+        List<Boolean> ans = new ArrayList<>();
+        for (int i = 0; i < candies.length; i++) {
+            if (candies[i] + extraCandies >= max) {
                 ans.add(true);
-            } else{
+            } else {
                 ans.add(false);
             }
         }
