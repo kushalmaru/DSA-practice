@@ -13,22 +13,18 @@ public class reshapeMatrix {
     }
 
     static int[][] matrixReshape(int[][] mat, int r, int c) {
-        if (r * c != mat.length * mat[0].length){
+        int m = mat.length;
+        int n = mat[0].length;
+        if(m * n != r * c){
             return mat;
         }
-        int ans[][] = new int[r][c];
-        ArrayList<Integer> arr = new ArrayList<>();
-        for (int[] i: mat){
-            for (int j: i){
-                arr.add(j);
-            }
+        if(r == m && c == n){
+            return mat;
         }
-        int a = 0;
-        for (int i = 0; i < r; i++){
-            for (int j = 0; j < c; j++){
-                ans[i][j] = arr.get(a);
-                a++;
-            }
+
+        int[][] ans = new int[r][c];
+        for(int i = 0; i < r * c; i++){
+            ans[i / c][i % c] = mat[i / n][i % n];
         }
         return ans;
     }
