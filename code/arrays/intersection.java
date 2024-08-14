@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class intersection {
  public static void main(String[] args) {
-    int A[]= {1,2,3,3,4,5,6,7};
-    int B[]= {3,3,4,4,5,8};
+    int arr1[]= {1,2,3,3,4,5,6,7};
+    int arr2[]= {3,3,4,4,5,8};
 
-    ArrayList<Integer> ans= intersectionOfArrays(A,B);
+    ArrayList<Integer> ans= intersectionOfArrays(arr1, arr2);
   
      for (int i = 0; i < ans.size(); i++) {
         System.out.print(ans.get(i)+" ");
