@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/smallest-value-after-replacing-with-sum-of-prime-factors/   2507
+
 public class smallestValue {
     public static void main(String[] args) {
         
